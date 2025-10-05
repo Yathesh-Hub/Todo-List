@@ -21,6 +21,8 @@ class TodoApp:
         self.listbox = tk.Listbox(root, width=45, height=10)
         self.listbox.pack(padx=10, pady=(0, 10))
 
+        self.listbox.bind('<Delete>',lambda event:self.delete_task())
+
         self.delete_button = tk.Button(root, text="Delete Selected", command=self.delete_task)
         self.delete_button.pack(pady=(0, 10))
 
